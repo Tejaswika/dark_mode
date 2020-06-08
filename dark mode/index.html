@@ -1,0 +1,50 @@
+<html>
+
+<head>
+  <title>Dark Mode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="hide">
+    <div class="web">
+<a>DARK MODE</a><br />
+     </div>
+  </div>
+  <div class="all">
+    <div class="outer">
+      <div class="button"> </div>
+    </div>
+    <div class="logo"></div>
+    <div class="switch" onclick="chgclr()"></div>
+  </div>
+  <script>
+    alert("click on the button 5 times !");
+    var x = 0;
+    var y = 0;
+    function chgclr() {
+      var a = document.getElementsByClassName("button");
+      if (x == 0) {
+        a[0].style.borderColor = "green";
+        a[0].style.boxShadow = "0px 0px 10px green";
+        document.getElementsByTagName("body")[0].style.backgroundColor =
+          "#000000c9";
+        y++;
+        x++;
+      } else {
+        a[0].style.borderColor = "red";
+        a[0].style.boxShadow = "0px 0px 10px red";
+        document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+        x--;
+        y++;
+      }
+      if (y == 5) {
+        var n = document.getElementsByClassName("web");
+        n[0].style.top = "0px";
+      }
+    }
+
+  </script>
+</body>
+
+</html>
